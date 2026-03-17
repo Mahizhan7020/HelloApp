@@ -1,9 +1,13 @@
 public class HelloApp {
     public static void main(String[] args) {
-        // If no argument is provided, default to "World"
-        String name = (args.length > 0) ? args[0] : "World";
-
-        // Display greeting
-        System.out.println("Hello " + name + "!");
+        if (args.length > 0) {
+            // Loop through all names provided
+            for (String name : args) {
+                System.out.println("Hello, " + name + "!");
+            }
+        } else {
+            // Default greeting if no arguments
+            System.out.println("Hello, World!");
+        }
     }
 }
